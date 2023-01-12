@@ -16,7 +16,7 @@ class ViewController: UIViewController {
        let map = MKMapView()
         map.showsUserLocation = true
         map.translatesAutoresizingMaskIntoConstraints = false
-    
+        
         return map
     }()
     lazy var searchTextfield : UITextField = {
@@ -68,6 +68,26 @@ class ViewController: UIViewController {
         
     }
 
-
+    private func checkLocationAuthorization() {
+        guard let locationManager = locationManager,
+              let location  = locationManager.location else {
+            return
+        }
+    }
 }
 
+extension ViewController:CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkLocationAuthorization()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
+    
+}
