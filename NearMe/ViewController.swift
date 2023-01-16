@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     lazy var searchTextfield : UITextField = {
         let searchTextfield = UITextField()
         searchTextfield.layer.cornerRadius = 10
+        searchTextfield.delegate = self
         searchTextfield.clipsToBounds = true
         searchTextfield.backgroundColor = UIColor.white
         searchTextfield.placeholder = "Search"
@@ -73,9 +74,40 @@ class ViewController: UIViewController {
               let location  = locationManager.location else {
             return
         }
+        
+        switch locationManager.authorizationStatus {
+            
+        case .notDetermined,.restricted:
+            print("Location cannot be determined or restricted")
+        case .denied:
+            print("Location services has been denied")
+        case .authorizedAlways, .authorizedWhenInUse:
+            let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 750, longitudinalMeters: 750)
+            mapView.setRegion(region, animated: true)
+        @unknown default:
+            break
+        }
+    }
+    
+    private func findNearbyPlaces(by query: String) {
+         
+         
+        
     }
 }
 
+extension ViewController :UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let text = textField.text ?? ""
+        if !text.isEmpty {
+            textField.resignFirstResponder()
+        }
+        
+        return true
+    }
+    
+}
 extension ViewController:CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
