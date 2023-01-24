@@ -13,6 +13,8 @@
 		0B7A3C8A296D9839005ECDA6 /*  ViewController                                                                                                                  .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A3C89296D9839005ECDA6 /*  ViewController                                                                                                                  .swift */; };
 		0B7A3C8F296D983A005ECDA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A3C8E296D983A005ECDA6 /* Assets.xcassets */; };
 		0B7A3C92296D983A005ECDA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A3C90296D983A005ECDA6 /* LaunchScreen.storyboard */; };
+		0B87976F298078D30099CF6C /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B87976E298078D30099CF6C /* PlaceDetailViewController.swift */; };
+		0B879771298086290099CF6C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B879770298086290099CF6C /* String+Extensions.swift */; };
 		0BADCC6829797CCB008EB236 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BADCC6729797CCB008EB236 /* PlaceAnnotation.swift */; };
 		0BADCC6B29797E53008EB236 /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BADCC6A29797E53008EB236 /* CLLocation+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 		0B7A3C8E296D983A005ECDA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B7A3C91296D983A005ECDA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B7A3C93296D983A005ECDA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B87976E298078D30099CF6C /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		0B879770298086290099CF6C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0BADCC6729797CCB008EB236 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		0BADCC6A29797E53008EB236 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				0B1E5F39297F24130070AE53 /* PlacesTableViewController.swift */,
+				0B87976E298078D30099CF6C /* PlaceDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				0BADCC6A29797E53008EB236 /* CLLocation+Extensions.swift */,
+				0B879770298086290099CF6C /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -161,7 +167,9 @@
 			files = (
 				0BADCC6829797CCB008EB236 /* PlaceAnnotation.swift in Sources */,
 				0BADCC6B29797E53008EB236 /* CLLocation+Extensions.swift in Sources */,
+				0B87976F298078D30099CF6C /* PlaceDetailViewController.swift in Sources */,
 				0B7A3C8A296D9839005ECDA6 /*  ViewController                                                                                                                  .swift in Sources */,
+				0B879771298086290099CF6C /* String+Extensions.swift in Sources */,
 				0B7A3C86296D9839005ECDA6 /* AppDelegate.swift in Sources */,
 				0B7A3C88296D9839005ECDA6 /* SceneDelegate.swift in Sources */,
 				0B1E5F3A297F24130070AE53 /* PlacesTableViewController.swift in Sources */,
